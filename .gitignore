@@ -1,0 +1,18 @@
+# Ignorar diretórios __pycache__ em qualquer lugar no projeto
+__pycache__/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de configuração do editor
+.vscode/
+.idea/
+
+# Ignorar arquivos de compilação
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivos de ambiente virtual
+venv/
+.env/
