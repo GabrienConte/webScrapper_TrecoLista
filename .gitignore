@@ -1,6 +1,8 @@
 # Ignorar diretórios __pycache__ em qualquer lugar no projeto
 __pycache__/
 
+__pycache__
+
 # Ignorar arquivos de log
 *.log
 
