@@ -5,13 +5,14 @@ from Sites import Sites
 import asyncio
 import aiohttp
 import validators
+import logging
 
 def get_produto_info(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
 
     if Sites.BooksToScrape.value in url:
-        title = soup.find('div', {'class': 'produto_main'}).find('h1').text.strip()
+        title = soup.find('div', {'class': 'product_main'}).find('h1').text.strip()
         price = soup.find('p', {'class': 'price_color'}).text.strip()
         image_relative_url = soup.find('div', {'class': 'item active'}).find('img')['src']
         image_url = urljoin(url, image_relative_url)
